@@ -31,7 +31,7 @@ class Rectangle : public Shape
     }
 };
 
-class Square : public Rectangle
+class RegularShape
 {
     public:
     void SideInfo()
@@ -39,6 +39,8 @@ class Square : public Rectangle
         cout<<"All sides are equal."<<endl;
     }
 };
+
+class Square : public Rectangle, public RegularShape {};
 
 int main()
 {
