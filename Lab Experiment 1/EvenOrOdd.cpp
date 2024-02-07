@@ -4,7 +4,17 @@
 
 using namespace std;
 
-bool IsEven(int);
+bool IsEven(int n)
+{
+    if(n%2 == 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
 
 int main()
 {
@@ -22,16 +32,4 @@ int main()
     }
     
     return 0;
-}
-
-bool IsEven(int n)
-{
-    if(n%2 == 0)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
 }

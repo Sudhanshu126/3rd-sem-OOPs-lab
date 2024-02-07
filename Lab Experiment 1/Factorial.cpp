@@ -4,19 +4,6 @@
 
 using namespace std;
 
-long int Factorial(int);
-
-int main()
-{
-    int n;
-    cout<<"Enter a number: ";
-    cin>>n;
-
-    cout<<"The factorial is : "<<Factorial(n)<<endl;
-    
-    return 0;
-}
-
 long int Factorial(int n)
 {
     long int factorial = 1;
@@ -27,4 +14,15 @@ long int Factorial(int n)
     }
 
     return factorial;
+}
+
+int main()
+{
+    int n;
+    cout<<"Enter a number: ";
+    cin>>n;
+
+    cout<<"The factorial is: "<<Factorial(n)<<endl;
+    
+    return 0;
 }

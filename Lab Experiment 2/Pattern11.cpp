@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
     int size;
-    cout<<"Enter size: ";
+    cout<<"Enter pattern size: ";
     cin>>size;
     int columns = 2*size-1;
 
@@ -23,14 +23,7 @@ int main()
                 cout<<" ";
             }
         }
-        if(i<size)
-        {
-            k++;
-        }
-        else
-        {
-            k--;
-        }
+        i<size ? k++ : k--;
         cout<<endl;
     }
 

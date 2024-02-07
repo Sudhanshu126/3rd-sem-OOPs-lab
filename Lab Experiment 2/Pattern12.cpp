@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
     int size;
-    cout<<"Enter size: ";
+    cout<<"Enter pattern size: ";
     cin>>size;
 
     for(int i=1; i<=size; i++)

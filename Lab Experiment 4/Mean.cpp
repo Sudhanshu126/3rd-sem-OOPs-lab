@@ -7,41 +7,31 @@ using namespace std;
 class Mean
 {
     private:
-    int *data;
+    int data1, data2, data3;
 
     public:
-    Mean(int data[])
+    Mean(int data1, int data2, int data3)
     {
-        this->data = data;
+        this->data1 = data1;
+        this->data2 = data2;
+        this->data3 = data3; 
     }
-    
-    friend float FindMean(Mean, int);
+
+    friend float FindMean(Mean);
 };
 
-float FindMean(Mean meanClass, int size)
+float FindMean(Mean mean)
 {
-    float sum = 0;
-    for(int i=0; i<size; i++)
-    {
-        sum+=meanClass.data[i];
-    }
-
-    return sum/size;
+    return (mean.data1+mean.data2+mean.data3)/3;
 }
 
 int main()
 {
-    int size, arr[100];
-    cout<<"Enter array size: ";
-    cin>>size;
-    cout<<"Enter "<<size<<" numbers: ";
-    for(int i=0; i<size; i++)
-    {
-        cin>>arr[i];
-    }
+    int num1, num2, num3;
+    cout<<"Enter 3 numbers: ";
+    cin>>num1>>num2>>num3;
 
-    Mean mean(arr);
-
-    cout<<"The mean is "<<FindMean(mean, size);
+    Mean num(num1, num2, num3);
+    cout<<"The mean is "<<FindMean(num)<<endl;
     return 0;
 }

@@ -10,11 +10,9 @@ int main()
 
     for(int i=1; i<=size; i++)
     {
-        int x = 1;
         for(int j=1; j<=i; j++)
         {
-            cout<<x;
-            x++;
+            cout<<j;
         }
         cout<<endl;
     }

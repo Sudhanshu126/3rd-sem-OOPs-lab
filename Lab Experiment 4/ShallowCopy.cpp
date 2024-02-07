@@ -1,41 +1,41 @@
 //WAP to demonstrate shallow copy
 
 #include <iostream>
-#include <vector>
-
 using namespace std;
 
-class Animals
+class MyClass
 {
-    public:
-    vector<string> animalList;
+    private:
+    int data1;
+    int *data2 = new int;
 
-    Animals(vector<string> animalList)
+    public:
+    MyClass(int data1, int data2)
     {
-        this->animalList = animalList;
+        this->data1 = data1;
+        *(this->data2) = data2;
+    }
+    MyClass(const MyClass &myClass)
+    {
+        this->data1 = myClass.data1;
+        this->data2 = myClass.data2;
+    }
+    void GetData()
+    {
+        cout<<"Data1: "<<data1<<endl;
+        cout<<"Data2: "<<*data2<<endl<<"Address of Data2: "<<data2<<endl;
     }
 };
 
 int main()
 {
-    vector<string> pets = {"Cat", "Dog"};
-    Animals animals(pets);
+    MyClass class1(10, 20);
+    cout<<"Class1 data: "<<endl;
+    class1.GetData();
 
-    Animals *animalsCopy = &animals;
-    animalsCopy->animalList.push_back("Goat");
+    MyClass class2(class1);
+    cout<<"Class2 data: "<<endl;
+    class2.GetData();
 
-    cout<<"Original: ";
-    for(string animal: animals.animalList)
-    {
-        cout<<animal<<", ";
-    }
-    cout<<endl;
-
-    cout<<"Deep Copy: ";
-    for(string animal: animalsCopy->animalList)
-    {
-        cout<<animal<<", ";
-    }
-    cout<<endl;
     return 0;
 }

@@ -4,7 +4,19 @@
 
 using namespace std;
 
-int Reverse(int);
+int Reverse(int num)
+{
+    int reverse = 0;
+    
+    while(num>0)
+    {
+        int lastDigit = num%10;
+        reverse = reverse*10 + lastDigit;
+        num /= 10;
+    }
+
+    return reverse;
+}
 
 int main()
 {
@@ -22,18 +34,4 @@ int main()
     }
 
     return 0;
-}
-
-int Reverse(int num)
-{
-    int reverse = 0;
-    
-    while(num>0)
-    {
-        int lastDigit = num%10;
-        reverse = reverse*10 + lastDigit;
-        num /= 10;
-    }
-
-    return reverse;
 }

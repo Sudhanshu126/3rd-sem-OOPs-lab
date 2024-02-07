@@ -5,25 +5,6 @@
 
 using namespace std;
 
-bool IsPrime(int);
-
-int main()
-{
-    int n;
-    cout<<"Enter a number: ";
-    cin>>n;
-
-    if(IsPrime(n))
-    {
-        cout<<"Number is prime."<<endl;
-    }
-    else
-    {
-        cout<<"Number is not prime."<<endl;
-    }
-    return 0;
-}
-
 bool IsPrime(int n)
 {
     if(n<2)
@@ -40,4 +21,21 @@ bool IsPrime(int n)
     }
     
     return true;
+}
+
+int main()
+{
+    int n;
+    cout<<"Enter a number: ";
+    cin>>n;
+
+    if(IsPrime(n))
+    {
+        cout<<"Number is prime."<<endl;
+    }
+    else
+    {
+        cout<<"Number is not prime."<<endl;
+    }
+    return 0;
 }

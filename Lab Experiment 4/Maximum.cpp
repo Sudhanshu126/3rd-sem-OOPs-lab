@@ -7,43 +7,31 @@ using namespace std;
 class Maximum
 {
     private:
-    int *data;
+    int data1, data2, data3;
 
     public:
-    Maximum(int data[])
+    Maximum(int data1, int data2, int data3)
     {
-        this->data = data; 
+        this->data1 = data1;
+        this->data2 = data2;
+        this->data3 = data3; 
     }
 
-    friend int FindMaximum(Maximum, int);
+    friend int FindMaximum(Maximum);
 };
 
-int FindMaximum(Maximum maximum, int size)
+int FindMaximum(Maximum max)
 {
-    int max = maximum.data[0];
-
-    for(int i=0; i<size; i++)
-    {
-        if(maximum.data[i]>max)
-        {
-            max = maximum.data[i];
-        }
-    }
-    return max;
+    return (max.data1>max.data2) ? (max.data1>max.data3 ? max.data1 : max.data3) : (max.data2>max.data3?max.data2:max.data3);
 }
 
 int main()
 {
-    int size, arr[100];
-    cout<<"Enter array size: ";
-    cin>>size;
-    cout<<"Enter "<<size<<" numbers: ";
-    for(int i=0; i<size; i++)
-    {
-        cin>>arr[i];
-    }
+    int num1, num2, num3;
+    cout<<"Enter 3 numbers: ";
+    cin>>num1>>num2>>num3;
 
-    Maximum num(arr);
-    cout<<"The maximum number is "<<FindMaximum(num, size)<<endl;
+    Maximum num(num1, num2, num3);
+    cout<<"The maximum number is "<<FindMaximum(num)<<endl;
     return 0;
 }
