@@ -13,15 +13,6 @@ class Shape
     }
 };
 
-class Circle : public Shape
-{
-    public:
-    void WhatShape()
-    {
-        cout<<"The shape is a circle."<<endl;
-    }
-};
-
 class Rectangle : public Shape
 {
     public:
@@ -44,10 +35,6 @@ class Square : public Rectangle, public RegularShape {};
 
 int main()
 {
-    Circle c;
-    c.GetInfo();
-    c.WhatShape();
-
     Square sq;
     sq.GetInfo();
     sq.WhatShape();

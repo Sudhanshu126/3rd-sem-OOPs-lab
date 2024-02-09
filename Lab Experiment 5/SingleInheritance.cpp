@@ -6,37 +6,28 @@ using namespace std;
 
 class Bird
 {
-    private:
-    string name;
-
     public:
-    Bird(string name)
+    virtual void Fly()
     {
-        this->name = name;
-    }
-
-    void Fly()
-    {
-        cout<<name<<" is flying."<<endl;
+        cout<<"Bird is flying."<<endl;
     }
 };
 
 class Duck : public Bird
 {
-    private:
-    string name;
-    
     public:
-    Duck(string name) : Bird(name)
+    void Fly()
     {
-        this->name = name;
+        cout<<"Duck is flying."<<endl;
     }
 };
 
 int main()
 {
-    Duck duck("Duck");
+    Bird bird;
+    bird.Fly();
 
+    Duck duck;
     duck.Fly();
 
     return 0;

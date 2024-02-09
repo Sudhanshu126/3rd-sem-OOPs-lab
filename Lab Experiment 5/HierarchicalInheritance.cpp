@@ -35,7 +35,6 @@ int main()
 {
     GermanShepherd gs;
     gs.WhatAnimal();
-    gs.GetBreed();
 
     Husky hs;
     hs.WhatAnimal();
