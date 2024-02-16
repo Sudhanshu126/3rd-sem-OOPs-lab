@@ -7,7 +7,7 @@ int main()
     int size;
     cout<<"Enter size: ";
     cin>>size;
-    size = 2*size+1;
+    size = 2*size-1;
 
     for(int i=1; i<=size; i++)
     {

@@ -9,7 +9,7 @@ class MyClass
     public:
         MyClass()
         {
-            cout<<"Default constructor invoked"<<endl;
+            cout<<"Default constructor invoked."<<endl;
         }
 };
 

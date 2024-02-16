@@ -22,7 +22,7 @@ class Mean
 
 float FindMean(Mean mean)
 {
-    return (mean.data1+mean.data2+mean.data3)/3;
+    return (mean.data1+mean.data2+mean.data3)/3.0;
 }
 
 int main()
